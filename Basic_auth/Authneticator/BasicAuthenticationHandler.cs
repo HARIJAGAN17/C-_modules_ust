@@ -21,7 +21,7 @@ namespace Basic_auth.Authneticator
                 return AuthenticateResult.Fail("Unauthorized");
             }
 
-            string authorizationHeader = Request.Headers["Authoriztion"];
+            string authorizationHeader = Request.Headers["Authorization"];
 
             if(string.IsNullOrEmpty(authorizationHeader))
             {
@@ -42,7 +42,7 @@ namespace Basic_auth.Authneticator
             var username = credentials[0];
             var password = credentials[1];
 
-            if(username == "harijagan" || password == "idkPassword") {
+            if(username == "harijagan" && password == "idkPassword") {
 
                 var claims = new[]
                 {

@@ -46,3 +46,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+//Tested running fine.

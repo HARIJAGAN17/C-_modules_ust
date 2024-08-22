@@ -1,3 +1,4 @@
+using jwt_auth.Authenticate;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -32,6 +33,9 @@ builder.Services.AddAuthentication(options =>
         };
     }
  );
+//Adding scope
+
+builder.Services.AddScoped<IJwtTokenManager, JwtTokenManager>();
 
 var app = builder.Build();
 
